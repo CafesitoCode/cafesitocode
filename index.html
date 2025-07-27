@@ -1,1 +1,117 @@
-<h1>GitHub test</h1>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mis Apps - Descárgalas Aquí</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background: #f4f6f8;
+            color: #333;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 40px 20px 30px;
+            background: #24292e;
+            color: white;
+            border-radius: 8px;
+        }
+        header h1 {
+            margin: 0;
+            font-weight: 700;
+            font-size: 2.5rem;
+        }
+        header p {
+            margin-top: 8px;
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+        main {
+            max-width: 900px;
+            margin: 30px auto 0;
+        }
+        .app-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .app-item {
+            background: white;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 3px 6px rgb(0 0 0 / 0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .app-item h2 {
+            margin: 0;
+            color: #0366d6;
+        }
+        .app-item p {
+            margin: 0;
+            font-size: 1rem;
+            line-height: 1.4;
+            color: #555;
+        }
+        .download-btn {
+            align-self: start;
+            padding: 10px 18px;
+            background: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+        .download-btn:hover {
+            background: #218838;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        @media(min-width: 600px) {
+            .app-item {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .app-item p {
+                flex: 1;
+                margin-right: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CafesitoCode Apps</h1>
+        <p>Descarga mis aplicaciones directamente desde aquí</p>
+    </header>
+    <main>
+        <ul class="app-list">
+            <li class="app-item">
+                <h2>App 1 - Calculadora Simple</h2>
+                <p>Una calculadora sencilla para realizar operaciones básicas. Fácil y rápida.</p>
+                <a href="https://tu-dominio.com/apps/calculadora.apk" class="download-btn" download>Descargar APK</a>
+            </li>
+            <li class="app-item">
+                <h2>App 2 - Tareas Pendientes</h2>
+                <p>Organiza tus tareas diarias con esta app simple y eficiente.</p>
+                <a href="https://tu-dominio.com/apps/tareas.apk" class="download-btn" download>Descargar APK</a>
+            </li>
+            <!-- Puedes duplicar estas secciones para agregar más apps -->
+        </ul>
+    </main>
+    <footer>
+        &copy; 2025 CafesitoCode. Todos los derechos reservados.
+    </footer>
+</body>
+</html>
