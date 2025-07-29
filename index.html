@@ -15,16 +15,17 @@
             background-color: #f0f0f0;
         }
 
-        .contenedor {
-            width: 1250px;
-            margin: 0 auto;
-        }
-
         header {
+            width: 100%;
             text-align: center;
             padding: 40px 20px 30px;
             background: #24292e;
             color: white;
+        }
+
+        .contenedor {
+            width: 1250px;
+            margin: 0 auto;
         }
 
         .promo-image {
@@ -85,12 +86,13 @@
 </head>
 <body>
 
-    <div class="contenedor">
-        <header>
-            <h1>CafesitoCode Apps</h1>
-            <p>Descarga mis aplicaciones directamente desde aquí</p>
-        </header>
+    <!-- Header ahora está fuera del contenedor para que ocupe todo el ancho -->
+    <header>
+        <h1>CafesitoCode Apps</h1>
+        <p>Descarga mis aplicaciones directamente desde aquí</p>
+    </header>
 
+    <div class="contenedor">
         <div class="fila2">
             <div class="izquierda">
                 <h2>Características principales</h2>
