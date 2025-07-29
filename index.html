@@ -33,9 +33,37 @@
             max-width: 900px;
             margin: 30px auto 0;
         }
+        .promo-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+        .features-box {
+            background-color: #2f2fff;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+        .features-box h2 {
+            margin-top: 0;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        .features-box ul {
+            list-style: none;
+            padding: 0;
+        }
+        .features-box li {
+            font-size: 1.1rem;
+            margin: 8px 0;
+        }
         .promo-image {
             display: block;
-            margin: 30px auto;
             max-width: 100%;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
@@ -95,6 +123,18 @@
                 margin-right: 20px;
             }
         }
+        @media(min-width: 768px) {
+            .promo-container {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            .features-box {
+                max-width: 45%;
+            }
+            .promo-image {
+                max-width: 50%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -105,18 +145,23 @@
 
     <main>
 
-        <!-- Imagen de promoción de la app de préstamos -->
-        <img src="https://github.com/CafesitoCode/cafesitocode/blob/main/Grafico%20de%20funcion%20Calc.%20De%20Prestamos.png?raw=true" alt="Calculadora de Préstamos" class="promo-image" />
+        <!-- Contenedor del banner y la sección de características -->
+        <div class="promo-container">
+            <!-- Sección de características -->
+            <div class="features-box">
+                <h2>Características principales</h2>
+                <ul>
+                    <li>📱 Interfaz fácil de usar</li>
+                    <li>📊 Cálculos rápidos y precisos</li>
+                    <li>🔐 Datos seguros y privados</li>
+                    <li>📥 Exportación de resultados</li>
+                    <li>🌙 Modo oscuro disponible</li>
+                </ul>
+            </div>
 
-        <ul class="app-list">
-            <!-- Sección 1 - Calculadora Simple -->
-            <li class="app-item">
-                <h2>App 1 - Calculadora Simple</h2>
-                <p>Una calculadora sencilla para realizar operaciones básicas. Fácil y rápida.</p>
-                <a href="https://tu-dominio.com/apps/calculadora.apk" class="download-btn" download>Descargar APK</a>
-            </li>
-
-                    <img src="https://github.com/CafesitoCode/cafesitocode/blob/main/Grafico%20de%20funcion%20Calc.%20De%20Prestamos.png?raw=true" alt="Calculadora de Préstamos" class="promo-image" />
+            <!-- Imagen promocional -->
+            <img src="https://github.com/CafesitoCode/cafesitocode/blob/main/Grafico%20de%20funcion%20Calc.%20De%20Prestamos.png?raw=true" alt="Calculadora de Préstamos" class="promo-image" />
+        </div>
 
         <ul class="app-list">
             <!-- Sección 1 - Calculadora Simple -->
