@@ -1,189 +1,231 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Mis Apps - Descárgalas Aquí</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            background: #f4f6f8;
-            color: #333;
-            padding: 20px;
-        }
-        header {
-            text-align: center;
-            padding: 40px 20px 30px;
-            background: #24292e;
-            color: white;
-            border-radius: 8px;
-        }
-        header h1 {
-            margin: 0;
-            font-weight: 700;
-            font-size: 2.5rem;
-        }
-        header p {
-            margin-top: 8px;
-            font-size: 1.2rem;
-            opacity: 0.8;
-        }
-        main {
-            max-width: 900px;
-            margin: 30px auto 0;
-        }
-        .promo-container {
-    display: flex;
-    flex-direction: row; /* Cambiado de column a row para que estén lado a lado */
-    gap: 20px;
-    align-items: center;
-    justify-content: center; /* Centrar horizontalmente */
-    margin-bottom: 40px;
-}
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CafesitoCode Apps</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background: #f4f6f8;
+    color: #333;
+  }
 
-.features-box {
-    background-color: #2f2fff;
+  /* Encabezado */
+  header {
+    background-color: #24292e;
     color: white;
-    padding: 20px;
-    border-radius: 10px;
-    /* max-width: 600px; */
-    /* width: 100%; */
-    flex: 1; /* ocupa menos espacio */
-    min-width: 200px; /* para que no quede muy pequeño */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-}
+    padding: 40px 20px;
+    text-align: center;
+  }
 
-.promo-image {
-    display: block;
+  header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+
+  header p {
+    margin-top: 8px;
+    font-size: 1.2rem;
+    opacity: 0.8;
+  }
+
+  /* Sección principal con título y descripción */
+  .main-title {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .main-title h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+
+  .main-title p {
+    font-size: 1.2rem;
+    color: #555;
+  }
+
+  /* Botón de descarga */
+  .download-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 24px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+
+  .download-btn:hover {
+    background-color: #218838;
+  }
+
+  /* Sección con imagen y texto lado a lado */
+  .promo-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    background-color: #fff;
+  }
+
+  .promo-text {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+  }
+
+  .promo-text h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .promo-text ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .promo-text li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+  }
+
+  .promo-image {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .promo-image img {
     max-width: 100%;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    flex: 2; /* ocupa el doble de espacio que .features-box */
-    max-height: 400px; /* opcional para limitar altura */
-    object-fit: contain; /* que la imagen mantenga proporción */
-}
-        .app-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .app-item {
-            background: white;
-            margin-bottom: 20px;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 3px 6px rgb(0 0 0 / 0.1);
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-        .app-item h2 {
-            margin: 0;
-            color: #0366d6;
-        }
-        .app-item p {
-            margin: 0;
-            font-size: 1rem;
-            line-height: 1.4;
-            color: #555;
-        }
-        .download-btn {
-            align-self: start;
-            padding: 10px 18px;
-            background: #28a745;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: 600;
-            transition: background-color 0.3s ease;
-        }
-        .download-btn:hover {
-            background: #218838;
-        }
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            font-size: 0.9rem;
-            color: #666;
-        }
-        @media(min-width: 600px) {
-            .app-item {
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
-            }
-            .app-item p {
-                flex: 1;
-                margin-right: 20px;
-            }
-        }
-        @media(min-width: 768px) {
-            .promo-container {
-                flex-direction: row;
-                justify-content: space-between;
-            }
-            .features-box {
-                max-width: 45%;
-            }
-            .promo-image {
-                max-width: 50%;
-            }
-        }
-    </style>
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  }
+
+  /* Lista de apps */
+  .app-list {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+
+  .app-item {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: 768px) {
+    .app-item {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  .app-info {
+    flex: 1;
+  }
+
+  .app-info h3 {
+    margin: 0 0 10px 0;
+    color: #0366d6;
+  }
+
+  .app-info p {
+    margin: 0 0 10px 0;
+    font-size: 1rem;
+    color: #555;
+  }
+
+  .download-btn-small {
+    align-self: flex-start;
+  }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: #666;
+  }
+</style>
 </head>
 <body>
-    <header>
-        <h1>CafesitoCode Apps</h1>
-        <p>Descarga mis aplicaciones directamente desde aquí</p>
-    </header>
 
-    <main>
+<header>
+  <h1>CafesitoCode Apps</h1>
+  <p>Descarga mis aplicaciones directamente desde aquí</p>
+</header>
 
-        <!-- Contenedor del banner y la sección de características -->
-        <div class="promo-container">
-            <!-- Sección de características -->
-            <div class="features-box">
-                <h2>Características principales</h2>
-                <ul>
-                    <li>📱 Interfaz fácil de usar</li>
-                    <li>📊 Cálculos rápidos y precisos</li>
-                    <li>🔐 Datos seguros y privados</li>
-                    <li>📥 Exportación de resultados</li>
-                    <li>🌙 Modo oscuro disponible</li>
-                </ul>
-            </div>
+<!-- Sección de título y descripción -->
+<div class="main-title">
+  <h2>Calculadora De Préstamos</h2>
+  <p>Calcule sus préstamos fácilmente con esta app especializada.</p>
+  <a href="https://tu-dominio.com/apps/prestamos.apk" class="download-btn" download>Descargar APK</a>
+</div>
 
-            <!-- Imagen promocional -->
-            <img src="https://github.com/CafesitoCode/cafesitocode/blob/main/Grafico%20de%20funcion%20Calc.%20De%20Prestamos.png?raw=true" alt="Calculadora de Préstamos" class="promo-image" />
-        </div>
+<!-- Sección con imagen y características -->
+<div class="promo-section">
+  <div class="promo-text">
+    <h3>Características principales</h3>
+    <ul>
+      <li>📱 Interfaz fácil de usar</li>
+      <li>📊 Cálculos rápidos y precisos</li>
+      <li>🔐 Datos seguros y privados</li>
+      <li>📥 Exportación de resultados</li>
+      <li>🌙 Modo oscuro disponible</li>
+    </ul>
+  </div>
+  <div class="promo-image">
+    <img src="https://github.com/CafesitoCode/cafesitocode/blob/main/Grafico%20de%20funcion%20Calc.%20De%20Prestamos.png?raw=true" alt="Calculadora de Préstamos" />
+  </div>
+</div>
 
-        <ul class="app-list">
-            <!-- Sección 1 - Calculadora Simple -->
-            <li class="app-item">
-                <h2>App 1 - Calculadora Simple</h2>
-                <p>Una calculadora sencilla para realizar operaciones básicas. Fácil y rápida.</p>
-                <a href="https://tu-dominio.com/apps/calculadora.apk" class="download-btn" download>Descargar APK</a>
-            </li>
+<!-- Lista de aplicaciones -->
+<div class="app-list">
+  <!-- App 1 -->
+  <div class="app-item">
+    <div class="app-info">
+      <h3>App 1 - Calculadora Simple</h3>
+      <p>Una calculadora sencilla para realizar operaciones básicas. Fácil y rápida.</p>
+    </div>
+    <a href="https://tu-dominio.com/apps/calculadora.apk" class="download-btn" download>Descargar APK</a>
+  </div>
 
-            <!-- Sección 2 - Calculadora de Préstamos -->
-            <li class="app-item">
-                <h2>App 2 - Calculadora de Préstamos</h2>
-                <p>Calcule sus préstamos fácilmente con esta app especializada. Rápida, simple y práctica.</p>
-                <a href="https://tu-dominio.com/apps/prestamos.apk" class="download-btn" download>Descargar APK</a>
-            </li>
+  <!-- App 2 -->
+  <div class="app-item">
+    <div class="app-info">
+      <h3>App 2 - Calculadora de Préstamos</h3>
+      <p>Calcule sus préstamos fácilmente con esta app especializada. Rápida, simple y práctica.</p>
+    </div>
+    <a href="https://tu-dominio.com/apps/prestamos.apk" class="download-btn" download>Descargar APK</a>
+  </div>
 
-            <!-- Sección 3 - Tareas Pendientes -->
-            <li class="app-item">
-                <h2>App 3 - Tareas Pendientes</h2>
-                <p>Organiza tus tareas diarias con esta app simple y eficiente.</p>
-                <a href="https://tu-dominio.com/apps/tareas.apk" class="download-btn" download>Descargar APK</a>
-            </li>
-        </ul>
-    </main>
+  <!-- App 3 -->
+  <div class="app-item">
+    <div class="app-info">
+      <h3>App 3 - Tareas Pendientes</h3>
+      <p>Organiza tus tareas diarias con esta app simple y eficiente.</p>
+    </div>
+    <a href="https://tu-dominio.com/apps/tareas.apk" class="download-btn" download>Descargar APK</a>
+  </div>
+</div>
 
-    <footer>
-        &copy; 2025 CafesitoCode. Todos los derechos reservados.
-    </footer>
+<footer>
+  &copy; 2025 CafesitoCode. Todos los derechos reservados.
+</footer>
+
 </body>
 </html>
