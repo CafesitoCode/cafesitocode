@@ -34,40 +34,35 @@
             margin: 30px auto 0;
         }
         .promo-container {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            align-items: center;
-            margin-bottom: 40px;
-        }
-        .features-box {
-            background-color: #2f2fff;
-            color: white;
-            padding: 20px;
-            border-radius: 10px;
-            max-width: 600px;
-            width: 100%;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-        }
-        .features-box h2 {
-            margin-top: 0;
-            font-size: 1.8rem;
-            margin-bottom: 10px;
-        }
-        .features-box ul {
-            list-style: none;
-            padding: 0;
-        }
-        .features-box li {
-            font-size: 1.1rem;
-            margin: 8px 0;
-        }
-        .promo-image {
-            display: block;
-            max-width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-        }
+    display: flex;
+    flex-direction: row; /* Cambiado de column a row para que estén lado a lado */
+    gap: 20px;
+    align-items: center;
+    justify-content: center; /* Centrar horizontalmente */
+    margin-bottom: 40px;
+}
+
+.features-box {
+    background-color: #2f2fff;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    /* max-width: 600px; */
+    /* width: 100%; */
+    flex: 1; /* ocupa menos espacio */
+    min-width: 200px; /* para que no quede muy pequeño */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.promo-image {
+    display: block;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    flex: 2; /* ocupa el doble de espacio que .features-box */
+    max-height: 400px; /* opcional para limitar altura */
+    object-fit: contain; /* que la imagen mantenga proporción */
+}
         .app-list {
             list-style: none;
             padding: 0;
