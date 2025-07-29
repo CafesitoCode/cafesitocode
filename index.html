@@ -33,6 +33,13 @@
             max-width: 900px;
             margin: 30px auto 0;
         }
+        .promo-image {
+            display: block;
+            margin: 30px auto;
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
         .app-list {
             list-style: none;
             padding: 0;
@@ -95,21 +102,36 @@
         <h1>CafesitoCode Apps</h1>
         <p>Descarga mis aplicaciones directamente desde aquí</p>
     </header>
+
     <main>
+
+        <!-- Imagen de promoción de la app de préstamos -->
+        <img src="https://github.com/CafesitoCode/cafesitocode/blob/main/Grafico%20de%20funcion%20Calc.%20De%20Prestamos.png?raw=true" alt="Calculadora de Préstamos" class="promo-image" />
+
         <ul class="app-list">
+            <!-- Sección 1 - Calculadora Simple -->
             <li class="app-item">
                 <h2>App 1 - Calculadora Simple</h2>
                 <p>Una calculadora sencilla para realizar operaciones básicas. Fácil y rápida.</p>
                 <a href="https://tu-dominio.com/apps/calculadora.apk" class="download-btn" download>Descargar APK</a>
             </li>
+
+            <!-- Sección 2 - Calculadora de Préstamos -->
             <li class="app-item">
-                <h2>App 2 - Tareas Pendientes</h2>
+                <h2>App 2 - Calculadora de Préstamos</h2>
+                <p>Calcule sus préstamos fácilmente con esta app especializada. Rápida, simple y práctica.</p>
+                <a href="https://tu-dominio.com/apps/prestamos.apk" class="download-btn" download>Descargar APK</a>
+            </li>
+
+            <!-- Sección 3 - Tareas Pendientes -->
+            <li class="app-item">
+                <h2>App 3 - Tareas Pendientes</h2>
                 <p>Organiza tus tareas diarias con esta app simple y eficiente.</p>
                 <a href="https://tu-dominio.com/apps/tareas.apk" class="download-btn" download>Descargar APK</a>
             </li>
-            <!-- Puedes duplicar estas secciones para agregar más apps -->
         </ul>
     </main>
+
     <footer>
         &copy; 2025 CafesitoCode. Todos los derechos reservados.
     </footer>
