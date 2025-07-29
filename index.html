@@ -59,33 +59,53 @@
             justify-content: center;
         }
 
+        /* NUEVO ESTILO PARA .fila3 */
         .fila3 {
-    background-color: rgba(255, 255, 255, 0.85); /* Blanco con opacidad */
-    height: 400px;
-    width: 100%;
-    color: #000; /* Texto oscuro para que contraste con el fondo blanco */
-    text-align: center;
-    padding: 40px 20px;
-    border-radius: 0 0 15px 15px; /* Opcional: bordes redondeados abajo */
-    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1); /* Sombra sutil arriba */
-}
+            background-color: rgba(255, 255, 255, 0.85);
+            padding: 20px 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
 
+        .contenido-app {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .info-texto {
+            text-align: left;
+            max-width: 75%;
+        }
+
+        .info-texto h2 {
+            color: #01579b;
+            margin: 0 0 8px 0;
+        }
+
+        .info-texto p {
+            margin: 0;
+            color: #333;
+        }
 
         .download-btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 24px;
-    background-color: #4CAF50; /* Verde */
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            font-size: 16px;
+            white-space: nowrap;
+        }
 
         .download-btn:hover {
-    background-color: #388E3C; /* Verde más oscuro al pasar el mouse */
-}
+            background-color: #388E3C;
+        }
     </style>
 </head>
 <body>
@@ -112,11 +132,17 @@
             </div>
         </div>
 
+        <!-- SECCIÓN MODIFICADA -->
         <div class="fila3">
-            <h2>App 2 - Calculadora de Préstamos</h2>
-            <p>Calcule sus préstamos fácilmente con esta app especializada. Rápida, simple y práctica.</p>
-            <a href="https://tu-dominio.com/apps/prestamos.apk" class="download-btn" download>Descargar APK</a>
+            <div class="contenido-app">
+                <div class="info-texto">
+                    <h2>App 2 - Calculadora de Préstamos</h2>
+                    <p>Calcule sus préstamos fácilmente con esta app especializada. Rápida, simple y práctica.</p>
+                </div>
+                <a href="https://tu-dominio.com/apps/prestamos.apk" class="download-btn" download>Descargar APK</a>
+            </div>
         </div>
+
     </div>
 
 </body>
