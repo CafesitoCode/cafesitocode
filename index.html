@@ -31,26 +31,16 @@ body{
     flex-direction: column;  
     height:100%;
 }
-.Contenedor1{
-    background-color: Blue;
-    display: flex;
-    flex-direction: row;
-    height:0%;
-}
-
-.Contenedor2{
+  
+  
+  
+.Contenedor_caract_y_background{
     background-color: darkBlue;
     display: flex;
     flex-direction: row;
     height:100%;
-}
-
-.izquierda_fila1{
-  flex-grow: 1;
-  background-color: #FFFF;
-  color: white;
-  height: 100%;
-}
+}  
+  
 
 .derecha_fila1{
     flex-grow: 5;
@@ -66,11 +56,48 @@ body{
 }
 
 .derecha_fila2{
-   background-color: #250;
-  flex-grow: 9;
+   background-color: #FFFF;
+   background-repeat: no-repeat;
+   background-size: cover; /* Para que la imagen se escale y cubra toda la pantalla */
+   flex-grow: 9;
 }
 
-   .fila3 {
+
+  .Divisiones_en_div_background{
+    display: flex;
+    flex-direction: row;
+    height:100%;
+}
+
+.izquierda2{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+ /* background-color: red;*/
+  color: white;
+  height: 100%;
+}
+  
+ .derecha2{
+  flex-grow: 1;
+ /*background-color: blue;*/
+  color: white;
+  height: 100%;
+}
+  
+.columna_arriba{
+    flex-grow: 1;
+ /*  background-color: #FFFF;*/
+}  
+  
+.Para_boton_de_reproduccion{
+  /*NOTA: Deje este espacio para poner un boton para reproducir videos sobre la app*/
+    flex-grow: 1;
+   /* background-color: red;*/
+} 
+  
+  
+.fila3 {
             background-color: rgba(255, 255, 255, 0.85);
             padding: 20px 30px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -130,18 +157,7 @@ height:60px;
   
   <div class="Contenedor_principal">  
 
-      <div class="Contenedor1">
-          <div class="izquierda_fila1">
-
-          </div>
-   
-         <div class="derecha_fila1">
-          
-         </div> 
-     </div>
-   
-   
-     <div class="Contenedor2">
+     <div class="Contenedor_caract_y_background">
           <div class="izquierda_fila2">
                        <h2>Características principales</h2>
                 <ul>
@@ -154,6 +170,22 @@ height:60px;
           </div>
          
           <div class="derecha_fila2" style="background-image:    url('https://github.com/CafesitoCode/cafesitocode/blob/main/Grafico%20de%20funcion%20Calc.%20De%20Prestamos%202.png?raw=true');">
+            
+      <div class="Divisiones_en_div_background">
+         <div class="izquierda2">
+               <div class="columna_arriba">
+               </div>
+           
+                <!-- NOTA: Deje este espacio para poner un boton para reproducir videos sobre la app -->
+               <div class="Para_boton_de_reproduccion">
+                 
+               </div>
+         </div>
+         
+         <div class="derecha2">
+           
+         </div> 
+    </div>
            
          </div> 
    
