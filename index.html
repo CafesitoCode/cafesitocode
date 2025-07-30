@@ -1,68 +1,76 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Diseño con 4 Divs</title>
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+ <html>
+<style>
+  
+  /*Esto corrige el error de crear un espacio alrrededor de toda la pagina que es causado por el margen predeterminado del navegador.*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}  
 
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-        }
+body{ 
+  background-color: darkblue;
+  display: flex;
+  flex-direction: column;  
+  height:100vh;
+}
 
-        .contenedor {
-            width: 1250px;
-            margin: 0 auto;
-        }
+.Encabezado {
+  text-align: center;
+  padding: 40px 20px 30px;
+  background: #24292e;
+  color: white;
+}
 
-        header {
-            text-align: center;
-            padding: 40px 20px 30px;
-            background: #24292e;
-            color: white;
-        }
 
-        .promo-image {
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-            display: block;
-        }
 
-        .fila2 {
-            display: flex;
-            height: 520px;
-            width: 100%;
-        }
+.Contenedor_principal{
+    background-color: lightBlue;
+    display: flex;
+    flex-direction: column;  
+    height:100%;
+}
+.Contenedor1{
+    background-color: Blue;
+    display: flex;
+    flex-direction: row;
+    height:0%;
+}
 
-        .izquierda {
-            width: 25%;
-            background-color: #2196F3;
-            color: white;
-            padding: 20px;
-        }
+.Contenedor2{
+    background-color: darkBlue;
+    display: flex;
+    flex-direction: row;
+    height:100%;
+}
 
-        .derecha {
-            width: 75%;
-            background-color: #f44336;
-            color: white;
-            height: 100%;
-            padding: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
+.izquierda_fila1{
+  flex-grow: 1;
+  background-color: #FFFF;
+  color: white;
+  height: 100%;
+}
 
-        /* NUEVO ESTILO PARA .fila3 */
-        .fila3 {
+.derecha_fila1{
+    flex-grow: 5;
+    background-color: #FFFF;
+    height: 100%;
+}
+
+.izquierda_fila2{
+  flex-grow: 0.1;
+  background-color: #2196F3;
+  color: white;
+  padding: 20px;
+}
+
+.derecha_fila2{
+   background-color: #250;
+  flex-grow: 9;
+}
+
+   .fila3 {
             background-color: rgba(255, 255, 255, 0.85);
             padding: 20px 30px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -80,15 +88,15 @@
             text-align: left;
             max-width: 75%;
         }
-
-        .info-texto h2 {
-            color: #01579b;
-            margin: 0 0 8px 0;
-        }
-
-        .info-texto p {
+  
+       .info-texto p {
             margin: 0;
             color: #333;
+        }
+  
+          .info-texto h2 {
+            color: #01579b;
+            margin: 0 0 8px 0;
         }
 
         .download-btn {
@@ -107,19 +115,35 @@
         .download-btn:hover {
             background-color: #388E3C;
         }
-    </style>
-</head>
-<body>
 
-    <div class="contenedor">
-        <header>
-            <h1>CafesitoCode Apps</h1>
-            <p>Descarga mis aplicaciones directamente desde aquí</p>
-        </header>
+footer{
+height:60px;
+}
+</style>
+  <body>
 
-        <div class="fila2">
-            <div class="izquierda" >
-                <h2>Características principales</h2>
+  <div class="Encabezado">
+               <h1>CafesitoCode Apps</h1>
+               <p>Descarga mis aplicaciones        directamente desde aquí</p>
+  </div>
+
+  
+  <div class="Contenedor_principal">  
+
+      <div class="Contenedor1">
+          <div class="izquierda_fila1">
+
+          </div>
+   
+         <div class="derecha_fila1">
+          
+         </div> 
+     </div>
+   
+   
+     <div class="Contenedor2">
+          <div class="izquierda_fila2">
+                       <h2>Características principales</h2>
                 <ul>
                     <li>📱 Interfaz fácil de usar</li>
                     <li>📊 Cálculos rápidos y precisos</li>
@@ -127,14 +151,24 @@
                     <li>📥 Exportación de resultados</li>
                     <li>🌙 Modo oscuro disponible</li>
                 </ul>
-            </div>
-            <div class="derecha" style="background-image: url('https://github.com/CafesitoCode/cafesitocode/blob/main/Grafico%20de%20funcion%20Calc.%20De%20Prestamos%202.png?raw=true');">
-               
-            </div>
-        </div>
+          </div>
+         
+          <div class="derecha_fila2" style="background-image:    url('https://github.com/CafesitoCode/cafesitocode/blob/main/Grafico%20de%20funcion%20Calc.%20De%20Prestamos%202.png?raw=true');">
+           
+         </div> 
+   
 
-        <!-- SECCIÓN MODIFICADA -->
-        <div class="fila3">
+    </div>
+   
+   
+</div>  
+   
+
+   
+
+
+   <footer>
+            <div class="fila3">
             <div class="contenido-app">
                 <div class="info-texto">
                     <h2>App 2 - Calculadora de Préstamos</h2>
@@ -143,8 +177,7 @@
                 <a href="https://tu-dominio.com/apps/prestamos.apk" class="download-btn" download>Descargar APK</a>
             </div>
         </div>
-
-    </div>
-
-</body>
-</html>
+   </footer>
+   
+  </body>
+ </html>
